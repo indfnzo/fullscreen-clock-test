@@ -1,0 +1,80 @@
+body {
+	font-size: 0px;
+	background: #222;
+}
+
+#canvas {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#canvas.hidden {
+	opacity: 0;
+}
+
+#time {
+	position: absolute;
+	bottom: 50%;
+	right: 0;
+	left: 0;
+	color: rgba(255,255,255,0.6);
+	font-family: "Roboto";
+	font-weight: 300;
+	font-size: 150px;
+	text-align: center;
+	opacity: 1;
+	z-index: 50;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#time.hidden {
+	bottom: calc(50% - 20px);
+	opacity: 0;
+}
+
+#date {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 0;
+	color: rgba(255,255,255,0.6);
+	font-family: "Roboto";
+	font-weight: 100;
+	font-size: 50px;
+	letter-spacing: 5px;
+	text-align: center;
+	opacity: 1;
+	z-index: 50;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#date.hidden {
+	top: calc(50% - 20px);
+	opacity: 0;
+}
+
+#time div, #date div {
+	display: inline-block;
+	opacity: 1;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+#time div.tick, #date div.tick {
+	opacity: 0;
+	transform: scale(0.9);
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+}
